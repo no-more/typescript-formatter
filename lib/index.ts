@@ -14,7 +14,7 @@ import * as tslintjson from "./provider/tslintjson";
 import * as vscodesettings from "./provider/vscodesettings";
 import { EOL } from "os";
 
-const packageJson = JSON.parse(fs.readFileSync(path.join(__dirname, "../package.json")).toString());
+const packageJson = require("../package.json");
 export const version = packageJson.version;
 
 export interface Options {
